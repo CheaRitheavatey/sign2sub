@@ -48,8 +48,8 @@ class MainWindow:
         # Apply initial theme
         self.apply_theme()
         
-    # handle setting change
     def on_settings_change(self, setting_name, value):
+        """Handle settings changes"""
         if setting_name == 'theme':
             self.theme_manager.set_theme(value)
             self.apply_theme()
@@ -60,8 +60,8 @@ class MainWindow:
         elif setting_name == 'subtitle_size':
             self.camera_frame.set_subtitle_size(value)
             
-    # apply theme to the whole thing
     def apply_theme(self):
+        """Apply the current theme to all components"""
         colors = self.theme_manager.get_all_colors()
         
         # Update root and main containers

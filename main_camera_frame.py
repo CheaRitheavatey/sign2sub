@@ -20,9 +20,9 @@ class CameraFrame(tk.Frame):
         
         self.setup_ui()
         
-    # set camera
     def setup_ui(self):
-         # Main camera container
+        """Setup the camera display UI"""
+        # Main camera container
         self.camera_container = tk.Frame(self, bg='black', relief='solid', bd=2)
         self.camera_container.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
         
@@ -47,10 +47,11 @@ class CameraFrame(tk.Frame):
         self.confidence_label.pack()
         
     def set_language(self, language):
+        """Set subtitle language"""
         self.language = language
         
-    # starting camera
     def start_camera(self):
+        """Start camera capture"""
         if not self.is_running:
             self.is_running = True
             try:
@@ -75,6 +76,7 @@ class CameraFrame(tk.Frame):
                 print(f"Camera error: {e}")
             
     def stop_camera(self):
+        """Stop camera capture"""
         self.is_running = False
         if self.cap:
             self.cap.release()
@@ -84,8 +86,8 @@ class CameraFrame(tk.Frame):
         self.current_confidence = 0.0
         self.update_subtitle("Camera stopped", 0.0)
         
-    # camera capture loop to improve processing
     def camera_loop(self):
+        """Main camera capture loop with improved processing"""
         frame_count = 0
         gesture_history = []
         stable_gesture = None
@@ -159,6 +161,7 @@ class CameraFrame(tk.Frame):
                     break
             
     def update_subtitle(self, text, confidence):
+        """Update subtitle display with confidence"""
         try:
             if text:
                 self.subtitle_label.configure(text=text)
@@ -174,15 +177,15 @@ class CameraFrame(tk.Frame):
         except tk.TclError:
             pass
             
-    # set title size
     def set_subtitle_size(self, size):
+        """Set subtitle size"""
         self.subtitle_size = size
         font_sizes = {"small": 18, "medium": 24, "large": 32}
         font_size = font_sizes.get(size, 24)
         self.subtitle_label.configure(font=('Arial', font_size, 'bold'))
         
-    # apply color theme
     def apply_theme(self, colors):
+        """Apply theme colors"""
         self.configure(bg=colors['bg'])
         self.camera_container.configure(bg='black', highlightbackground=colors['border'])
         self.subtitle_container.configure(bg=colors['panel_bg'], highlightbackground=colors['border'])

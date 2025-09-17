@@ -13,7 +13,8 @@ It runs entirely on your computer with real-time predictions.
 
 ### 🔗 Link to Demo
 
-Link: [GitHub Repository]
+- First Demo Link: https://chearitheavatey.github.io/signlanguage-to-subtitle-converter/
+- Current Demo Link:
 
 ---
 

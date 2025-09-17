@@ -11,6 +11,12 @@ It runs entirely on your computer with real-time predictions.
 
 ---
 
+### 🔗 Link to Demo
+
+Link: [GitHub Repository]
+
+---
+
 ## 🚀 Features
 
 - Real-time webcam hand detection using [cvzone HandTrackingModule](https://github.com/cvzone/cvzone).
@@ -61,7 +67,3 @@ It runs entirely on your computer with real-time predictions.
 - Integrate with speech synthesis for real-time translation.
 
 ---
-
-# sign2sub
-
-Link:

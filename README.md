@@ -61,3 +61,7 @@ It runs entirely on your computer with real-time predictions.
 - Integrate with speech synthesis for real-time translation.
 
 ---
+
+# sign2sub
+
+Link:

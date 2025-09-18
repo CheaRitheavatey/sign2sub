@@ -6,4 +6,4 @@ venv\Scripts\activate
 source venv/bin/activate
 
 pip install mediapipe opencv-python scikit-learn joblib customtkinter pillow
-pip freeze > requirements.txt
+pip freeze 
